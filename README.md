@@ -269,3 +269,52 @@ setelah berhasil informasinya akan seperti ini :
 Sukses! 
 Total: 1 tabel 
 ```
+
+# Menjalankan server di localhost
+Untuk menjalankan server dilocalhost, gunakan perintah berikut :
+```
+php abiesoft start
+```
+
+# Melihat route yang tersedia
+Untuk melihat route yang tersedia, gunakan perintah berikut :
+```
+php abiesoft info route
+```
+
+maka akan tampil seperti ini :
+```
+Daftar Route 
+No    Route                                                   Method 
+1.    /api/csrf  ------------------------------------------      GET 
+2.    /api/test  ------------------------------------------      GET 
+3.    /api/test/:id  --------------------------------------      GET 
+4.    /api/test/:parameter  -------------------------------      GET 
+5.    /api/test  ------------------------------------------     POST 
+6.    /api/test  ------------------------------------------      PUT 
+7.    /api/test  ------------------------------------------   DELETE 
+```
+
+# Menambahkan route
+Buka konfigurasi route di folder <code>config/route.yaml</code>
+
+Untuk membuat route default gunakan kode <code>route:</code>. contoh kita membuat route <code>test</code>, maka :
+```
+test:
+```
+
+Untuk membuat route single route gunakan kode. Contoh kita membuat singel route untuk <code>csrf</code>, maka:
+```
+csrf:
+    method: 'get'
+    url: '/api/csrf'
+    service: 'csrf'
+    function: 'set'
+```
+
+| Nama | Keterangan |
+| --- | --- |
+| `csrf` | Nama route |
+| `url` | Url route |
+| `service` | Class Api yang ada di folder `service/Api/CsrfApi.php` |
+| `function` | Function di Class Api yang ada di folder `service/Api/CsrfApi.php` |
