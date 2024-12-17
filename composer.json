@@ -1,0 +1,20 @@
+{
+    "name": "abiesoft/api-service",
+    "autoload": {
+        "psr-4": {
+            "Abiesoft\\Resources\\": "vendor/abiesoft/",
+            "App\\Schema\\": "schema/",
+            "App\\Model\\": "models/",
+            "App\\Service\\": "service/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sukron",
+            "email": "abiesoft22@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/yaml": "^7.1"
+    }
+}

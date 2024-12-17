@@ -1,0 +1,6 @@
+csrf:
+    method: 'get'
+    url: '/api/csrf'
+    service: 'csrf'
+    function: 'set'
+test:
